@@ -6,4 +6,8 @@ if(__name__ == '__main__'):
     sparkDF = spark.read.csv(path,header=True)
 
     sparkDF.show()
+    sparkDF.printSchema()
+    orderedDF = sparkDF.withColumn("S_No",sparkDF["S_No"].cast("Int")).sort("S_No")
+    orderedDF.show()
+    orderedDF.printSchema()
     print("Spark dataframe is succesfully displayed")

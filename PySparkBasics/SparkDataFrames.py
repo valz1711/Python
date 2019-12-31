@@ -6,3 +6,4 @@ if(__name__ == '__main__'):
     sparkDF = spark.read.csv(path,header=True)
 
     sparkDF.show()
+    print("Spark dataframe is succesfully displayed")

@@ -10,4 +10,5 @@ if(__name__ == '__main__'):
     orderedDF = sparkDF.withColumn("S_No",sparkDF["S_No"].cast("Int")).sort("S_No")
     orderedDF.show()
     orderedDF.printSchema()
+
     print("Spark dataframe is succesfully displayed")

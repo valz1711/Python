@@ -3,7 +3,7 @@ from pyspark.sql import SparkSession
 if(__name__ == '__main__'):
     spark = SparkSession.builder.getOrCreate()
     path = "C:/Users/Valan Aravind/Desktop/Scala/R/Data/SparkCSV.csv"
-    sparkDF = spark.read.csv(path,header=True)
+    sparkDF = spark.read.csv(path,header=True,inferSchema=True)
 
     sparkDF.show()
     sparkDF.printSchema()
